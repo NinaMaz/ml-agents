@@ -89,7 +89,7 @@ class Trainer(object):
         """
         Decides actions given state/observation information, and takes them in environment.
         :param info: Current BrainInfo from environment.
-        :return: a tupple containing action, memories, values and an object
+        :return: a tuple containing action, memories, values and an object
         to be passed to add experiences
         """
         raise UnityTrainerException("The take_action method was not implemented.")
