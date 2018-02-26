@@ -119,7 +119,7 @@ class LearningModel(object):
         if brain.action_space_type == "continuous":
             activation_fn = tf.nn.tanh
         else:
-            activation_fn = tf.nn.elu
+            activation_fn = tf.nn.tanh
 
         self.observation_in = []
         for i in range(brain.number_observations):

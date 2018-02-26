@@ -31,8 +31,8 @@ BrainWallJumpCC:
 Ball3DBrainR:
     summary_freq: 1000
     normalize: true
-    batch_size: 1000
-    buffer_size: 10000
+    # batch_size: 1000
+    # buffer_size: 10000
     hidden_units: 64
     max_steps: 1.0e4
     time_horizon: 32
