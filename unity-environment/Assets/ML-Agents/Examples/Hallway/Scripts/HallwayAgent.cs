@@ -83,17 +83,6 @@ public class HallwayAgent : Agent
     }
 
 
-    //moves a rigidbody towards a position with a smooth controlled movement.
-    void MoveTowards(Vector3 targetPos, Rigidbody rb, float targetVel, float maxVel)
-    {
-        Vector3 moveToPos = targetPos - rb.worldCenterOfMass;  //cube needs to go to the standard Pos
-        Vector3 velocityTarget = moveToPos * targetVel * Time.fixedDeltaTime; //not sure of the logic here, but it modifies velTarget
-        if (float.IsNaN(velocityTarget.x) == false) //sanity check. if the velocity is NaN that means it's going way too fast. this check isn't needed for slow moving objs
-        {
-            rb.velocity = Vector3.MoveTowards(rb.velocity, velocityTarget, maxVel);
-        }
-    }
-
     public override List<float> CollectState()
     {
         float rayDistance = 8.5f;
